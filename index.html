@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vedant and Mahir</title>
+</head>
+<style>
+*{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+#main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #292626;
+}
+#animation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+    width: 70vh;
+    height: 100vh;
+}
+#top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 15px;
+}
+#bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+#right{
+    position: relative;
+    left: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: white;
+    height: 100vh;
+    width: 30vw;
+}
+</style>
+<body>
+    <div id="main">
+        <div id="animation">
+            <canvas id="riveCanvas" width="500" height="500">
+            </canvas>
+        </div>
+        <div id="right">
+                <div id="top">
+                    <img src="logo-ab2c8814.png" alt="" width="80" height="80">
+                    <h1 id="welcome">Welcome to XCEED</h1>
+                    <p id="subh">Empowering campus connectivity through digital innovation</p>
+                </div>
+                <div id="bottom">
+                    <h5 id="email">Email</h5>
+                    <input id="emailinput" type="email" placeholder="Enter your email">
+                    <h5 id="pass">Password</h5>
+                    <input id="passinput" type="text" placeholder="Enter your Password">
+                    <a href="" id="forgot">Forgot Password?</a>
+                    <button id="login">Login</button>
+                    <p>
+                        Vedant - 24126055
+                        Mahir - 24124056
+                    </p>
+                </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/rive-js"></script>
+    <script>
+        // Wait for the DOM to load before accessing the canvas
+        new rive.Rive({
+            src: 'xceed.riv',
+            canvas: document.getElementById("riveCanvas"),
+            autoplay: true
+        })
+    </script>
+</body>
+
+</html>
